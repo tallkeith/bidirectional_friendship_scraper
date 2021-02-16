@@ -103,20 +103,17 @@ GEM
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    google_url_shortener (1.1.0)
-      json (>= 1.4.6)
-      rest-client (>= 1.6.7)
-      trollop (>= 1.16.2)
     hashdiff (1.0.1)
     headless (2.3.1)
-    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httparty (0.18.1)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
-    json (2.5.1)
     kimurai (1.4.0)
       activesupport
       capybara (>= 2.15, < 4.0)
@@ -161,11 +158,11 @@ GEM
     mini_portile2 (2.5.0)
     minitest (5.14.3)
     msgpack (1.4.2)
+    multi_xml (0.6.0)
     murmurhash3 (0.1.6)
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.1)
       connection_pool (~> 2.2)
-    netrc (0.11.0)
     nio4r (2.5.5)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
@@ -229,11 +226,6 @@ GEM
       ffi (~> 1.0)
     rbcat (0.2.1)
     regexp_parser (2.0.3)
-    rest-client (2.1.0)
-      http-accept (>= 1.7.0, < 2.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
     rexml (3.2.4)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
@@ -277,7 +269,6 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.1.0)
     tilt (2.0.10)
-    trollop (2.9.10)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -320,7 +311,7 @@ DEPENDENCIES
   byebug
   dotenv-rails
   factory_bot_rails
-  google_url_shortener (~> 1.1)
+  httparty
   jbuilder (~> 2.7)
   kimurai
   listen (~> 3.3)
@@ -330,7 +321,6 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
   rails-controller-testing
-  rest-client
   rspec-rails
   sass-rails (>= 6)
   spring
