@@ -1,5 +1,5 @@
-
-
+# Web Scraping Service that takes in a user's url and grabs all of the h1, h2,
+# and h3 tags on the page. Called from UsersController#show
 class ScrapingService
 
   def initialize(url)
@@ -12,9 +12,6 @@ class ScrapingService
 
   def scraper
     unparsed_page = HTTParty.get(@url)
-    parse_page = Nokogiri::HTML(unparsed_page)
-    h1 = parse_page.css('h1')
-    h2 = parse_page.css('h2')
-    h3 = parse_page.css('h3')
+    Nokogiri::HTML(unparsed_page)
   end
 end
